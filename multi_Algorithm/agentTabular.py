@@ -17,6 +17,7 @@
 import numpy as np
 import gym
 import matplotlib.pyplot as plt
+import EGreedyPolicyTabular
 
 # Contains the agent's basic functionality, such as to train and benchmark the agent.
 class Agent:
@@ -52,7 +53,7 @@ class Agent:
 # Implements the specific functionality of a tabular agent, such as to initilize
 # the agent or run episodes.
 class TabularAgent(Agent):
-    def __init__(self, env, policy, alpha, lamda = 0, gamma = 1, fixedQval = 0,
+    def __init__(self, env, policy: EGreedyPolicyTabular, alpha, lamda = 0, gamma = 1, fixedQval = 0,
         horizon = 1000, verbosity = 0):
         # Inputs:
         #   -env: openAI gym environment object
@@ -269,7 +270,8 @@ def compareMethods():
     lamda4 = 0.8
     agent4 = QlearWatkins(env, policy, alpha4, lamda4, horizon = 20)
 
-    agents = [agent1, agent2, agent3, agent4]
+    # agents = [agent1, agent2, agent3, agent4]
+    agents = [agent1]
 
     eps_per_point = int(training_episodes / n_plot_points)
     benchmark_data = np.zeros((4, n_plot_points))

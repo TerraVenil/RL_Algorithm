@@ -1,8 +1,10 @@
 # Copy https://github.com/dennybritz/reinforcement-learning/blob/master/lib/envs/gridworld.py
 
+from io import StringIO
 import numpy as np
 import sys
-from gym.envs.toy_text import discrete
+# from gym.envs.toy_text import discrete
+import multi_Algorithm.discrete as discrete
 
 UP = 0
 RIGHT = 1

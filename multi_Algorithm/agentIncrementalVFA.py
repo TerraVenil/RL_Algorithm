@@ -18,10 +18,10 @@
 
 # Import necessary libraries and functions
 import numpy as np
-from util import Agent
-from util import Featurize
-from util import LinearVFA
-from util import EGreedyPolicyVFA
+from Agent import Agent
+from Featurize import Featurize
+from LinearVFA import LinearVFA
+from EGreedyPolicyVFA import EGreedyPolicyVFA
 
 # Implements the specific functionality of a incremental value function approximation
 # agent, such as to initialize the agent or run episodes.
